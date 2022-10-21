@@ -6,13 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent implements OnInit {
-
-  message = "message from Child"
-
-  fonctionDuChild= () => {
-    console.log("log de la fonction du child")
-  }
-
   
   constructor() { }
 
