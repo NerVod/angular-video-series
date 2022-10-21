@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,16 +7,18 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
-@Output()AlertFromChild = new EventEmitter<string>();
+  message = "message from Child"
+
+  fonctionDuChild= () => {
+    console.log("log de la fonction du child")
+  }
+
   
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  AlerteAuClick() {
-    this.AlertFromChild.emit('bouton clické dans le child')
-  }
 
 
 }

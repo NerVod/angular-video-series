@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -7,18 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
 
-  counter: number = 0
+  @ViewChild(ChildComponent) child: any;
 
   constructor() { }
 
   ngOnInit(): void {
-
-
   }
 
-displayAlert(msg:string) {
-  this.counter ++;
-  console.log(`${msg} compté ${this.counter} fois dans le parent`)
-}
+  ngAfterViewInit() {
+    alert(this.child.message)
+    this.child.fonctionDuChild()
+  }
+
+
 
 }
