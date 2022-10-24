@@ -1,10 +1,4 @@
-<style>
-    img {
-        height: 200px;
-    }
-</style>
+<app-sizer [(size)]="fontSizepx"></app-sizer>
+<div [style.font-size.px]="fontSizepx">Resizable text</div>
 
-<p><img src="{{itemImageUrl}}" alt=""image red pill blue pill /></p>
-
-<!-- same result :  -->
-<p><img [src]="itemImageUrl" alt=""image red pill blue pill /></p>
+<!-- <app-sizer [size]="fontSizepx" (sizeChange)="fontSizepx"></app-sizer> -->

@@ -1,5 +1,4 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-item-details',
