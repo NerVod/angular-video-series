@@ -5,18 +5,14 @@ import { Component, OnInit} from '@angular/core';
   // templateUrl: './parent.component.html',
   // styleUrls: ['./parent.component.scss']
   template: `
-    <div [style]="{
-      width: '200px',
-      height: '200px',
-      backgroundColor: 'pink'
-    }">Is on Sale</div>
-
+    <app-item-details (deleteRequest)="deleteItem($event)"></app-item-details>
   `
 })
 export class ParentComponent implements OnInit {
 
-  onSale = true
-  pink = "pink"
+  deleteItem(item: any) {
+    console.log(item)
+  }
 
   constructor() { }
 
