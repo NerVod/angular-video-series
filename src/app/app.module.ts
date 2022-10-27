@@ -10,6 +10,7 @@ import { GreetingsPipePipe } from './greetings-pipe.pipe';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { SizerComponent } from './sizer/sizer.component';
 import { FormsModule } from '@angular/forms'
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms'
     GreetingsPipePipe,
     ItemDetailsComponent,
     SizerComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
