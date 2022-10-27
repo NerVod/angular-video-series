@@ -11,11 +11,13 @@ isSpecial = true ;
 
 currentClasses = {};
 
+currentStyles= {}
 
   constructor() { }
 
   ngOnInit(): void {
     this.setCurrentClasses()
+    this.setCurrentStyle()
   }
 
   setCurrentClasses() {
@@ -27,7 +29,14 @@ currentClasses = {};
     }
   }
 
+setCurrentStyle() {
+  this.currentStyles = {
+    'font-style' : 'Italic',
+    'font-weight': "900",
+    'color': 'blue'
 
+  }
+}
  
 
 }
