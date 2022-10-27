@@ -13,6 +13,8 @@ currentClasses = {};
 
 currentStyles= {}
 
+name = 'your name'
+
   constructor() { }
 
   ngOnInit(): void {
