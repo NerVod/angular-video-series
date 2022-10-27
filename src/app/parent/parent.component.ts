@@ -7,11 +7,24 @@ import { Component, OnInit} from '@angular/core';
 })
 export class ParentComponent implements OnInit {
 
-fontSizepx = 16
+isSpecial = true ;
+
+currentClasses = {};
+
 
   constructor() { }
 
   ngOnInit(): void {
+    this.setCurrentClasses()
+  }
+
+  setCurrentClasses() {
+    this.currentClasses = {
+      saveable: true,
+      modified: true,
+      special: false,
+      superclasse: true
+    }
   }
 
 
