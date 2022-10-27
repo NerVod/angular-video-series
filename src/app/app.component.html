@@ -1,1 +1,3 @@
-<app-parent></app-parent>
+<!-- <app-parent></app-parent> -->
+<input #ref1 type="text" [(ngModel)]= "firstExample" />
+<span *ngIf="true">{{ref1.value}}</span>

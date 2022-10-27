@@ -9,6 +9,7 @@ import { ChildComponent } from './child/child.component';
 import { GreetingsPipePipe } from './greetings-pipe.pipe';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { SizerComponent } from './sizer/sizer.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SizerComponent } from './sizer/sizer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,15 +4,14 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
+  // template: `
+  // <input #ref1 type="text" [(ngModel)]= "firstExample" />
+  // <span *ngIf="true">{{ref1.value}}</span>
+
+  // `
 })
 export class AppComponent  {
-  title = 'angular-video-series';
 
-  getMin(a:number, b: number) {
-    if( a < b) {
-      return a
-    } 
-    return b
-  }
+  firstExample = '';
 
 }
