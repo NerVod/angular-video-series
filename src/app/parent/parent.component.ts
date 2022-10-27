@@ -15,6 +15,18 @@ currentStyles= {}
 
 name = 'your name'
 
+isActive = true
+
+// items= [
+// {name:'Bob'},
+// {name:'Tony'},
+// {name:'Ralph'},
+// {name:'Jack'}
+// ]
+
+item= {name:'Robert'}
+
+
   constructor() { }
 
   ngOnInit(): void {
