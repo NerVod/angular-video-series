@@ -1,1 +1,28 @@
 <p>child-b works!</p>
+<div [hidden]="submited">
+    <p>{{model | json}}</p>
+    <form #petForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">Name</label>
+            <input type="text"
+            id="name"
+            required
+            [(ngModel)]="model.name"
+            name="name"                
+            />
+        </div>
+        <div>
+            <label for="specie">Specie</label>
+            <select id="species" required [(ngModel)]="model.specie" name="specie">
+                <option *ngFor="let specie of species" [value]="specie">{{specie}}</option>
+            </select>
+
+        </div>
+        <button [disabled]="!petForm.form.valid" type="submit">Submit</button>
+    </form>
+</div>
+<div [hidden]="!submited">Formulaire validé ! 
+    <p>Name :{{model.name}}</p>
+    <p>Specie :{{model.specie}}</p>
+    <button (click)="submited = false">Edit</button>
+</div>
