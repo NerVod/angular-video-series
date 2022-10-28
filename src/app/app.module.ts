@@ -12,6 +12,10 @@ import { SizerComponent } from './sizer/sizer.component';
 import { FormsModule } from '@angular/forms'
 import { HighlightDirective } from './highlight.directive';
 import { LogService } from './log.service';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+import { ChildAComponent } from './child-a/child-a.component';
+import { ChildBComponent } from './child-b/child-b.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { LogService } from './log.service';
     ItemDetailsComponent,
     SizerComponent,
     HighlightDirective,
+    FirstComponent,
+    SecondComponent,
+    ChildAComponent,
+    ChildBComponent,
   ],
   imports: [
     BrowserModule,

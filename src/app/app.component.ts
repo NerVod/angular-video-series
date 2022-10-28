@@ -6,20 +6,29 @@ import { LogService } from './log.service';
   // templateUrl: './app.component.html',
   // styleUrls: ['./app.component.scss']
   template: `
-  <h1>Angular rules ! </h1>
+  <h1>Angular router App</h1>
+
+  <nav>
+      <ul>
+        <li><a routerLink="first-component/1">First Component</a></li>
+        <li><a routerLink="second-component/{{deuxieme}}">Second Component</a></li>
+      </ul>
+  </nav>
+  <router-outlet></router-outlet>
+
   `
 })
 export class AppComponent  {
 
+  deuxieme:string = 'deuz'
+
+
   constructor(
-    private logService : LogService,
-    private renderer: Renderer2,
-    private host: ElementRef
+    
     ) {}
 
   ngOnInit() {
-    this.logService.logMessage('Welcome Master !')
-    this.renderer.setStyle(this.host.nativeElement, 'color', 'red')
+    
   }
 
 }
