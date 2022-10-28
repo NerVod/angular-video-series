@@ -11,6 +11,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { SizerComponent } from './sizer/sizer.component';
 import { FormsModule } from '@angular/forms'
 import { HighlightDirective } from './highlight.directive';
+import { LogService } from './log.service';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,14 @@ import { HighlightDirective } from './highlight.directive';
     GreetingsPipePipe,
     ItemDetailsComponent,
     SizerComponent,
-    HighlightDirective
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
