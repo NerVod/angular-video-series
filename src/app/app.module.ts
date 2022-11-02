@@ -16,7 +16,9 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { ChildAComponent } from './child-a/child-a.component';
 import { ChildBComponent } from './child-b/child-b.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormulaireComponent } from './formulaire/formulaire.component'
 
 @NgModule({
   declarations: [
@@ -32,12 +34,14 @@ import { HttpClientModule } from '@angular/common/http'
     SecondComponent,
     ChildAComponent,
     ChildBComponent,
+    FormulaireComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [LogService],
   bootstrap: [AppComponent]
