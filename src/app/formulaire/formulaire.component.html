@@ -1,12 +1,15 @@
 <p>formulaire works!</p>
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <label for="first-name">Prénom</label>
-    <input id="first-name" type="text" formControlName="firstName" required>
-<br>
-    <label for="last-name">Nom de famille</label>
-    <input id="last-name" type="text" formControlName="lastName" required>
-<br>
+<form [formGroup]="validationForm">
+    <input  type="text" 
+            name="name" 
+            required 
+            minlength="4" 
+            formControlName="name"
+            />
+            
+    <div *ngIf="name?.invalid && (name?.dirty || name?.touched)">
+        <div *ngIf="name?.errors?.['required']">Name is required</div>
+        <div *ngIf="name?.errors?.['minlength']">Name must be at least 4 characters</div>
 
-<button type="submit" [disabled]="!profileForm.valid">submit</button>
-
+    </div>
 </form>
