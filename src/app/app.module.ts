@@ -41,7 +41,7 @@ import { FormulaireComponent } from './formulaire/formulaire.component'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [LogService],
   bootstrap: [AppComponent]

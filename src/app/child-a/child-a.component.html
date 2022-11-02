@@ -1,1 +1,20 @@
 <p>child-a works!</p>
+
+<button (click)="getCocktail()">Get Cocktail</button>
+
+<div *ngIf="cocktailName$">
+    <h1 *ngIf="cocktailName$">{{cocktailName$}}</h1>
+    <div>
+        <h3>Ingredient list :</h3>
+        <ul>
+            <li *ngIf="cocktailIngredient1$">{{cocktailIngredient1$}}</li>
+            <li *ngIf="cocktailIngredient2$">{{cocktailIngredient2$}}</li>
+            <li *ngIf="cocktailIngredient3$">{{cocktailIngredient3$}}</li>
+            <li *ngIf="cocktailIngredient4$">{{cocktailIngredient4$}}</li>
+            <li *ngIf="cocktailIngredient4$">{{cocktailIngredient5$}}</li>
+            <li *ngIf="cocktailIngredient4$">{{cocktailIngredient6$}}</li>
+            <li *ngIf="cocktailIngredient4$">{{cocktailIngredient7$}}</li>
+        </ul>
+    </div>
+    
+</div>
