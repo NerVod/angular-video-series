@@ -8,17 +8,26 @@ import { FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class FormulaireComponent implements OnInit {
 
-  nameInput = '';
+  firstnameInput = '';
+  lastnameInput = '';
 
   validationForm = new FormGroup({
-    name: new FormControl(this.nameInput, [
+    firstname: new FormControl(this.firstnameInput, [
       Validators.required,
       Validators.minLength(4)
+    ]),
+    lastname: new FormControl(this.lastnameInput, [
+      Validators.required,
+      Validators.minLength(4),
+      Validators.maxLength(8)
     ])
   })
 
-  get name() {
-    return this.validationForm.get('name');
+  get firstname() {
+    return this.validationForm.get('firstname');
+  }
+  get lastname() {
+    return this.validationForm.get('lastname');
   }
 
 
